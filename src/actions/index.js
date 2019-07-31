@@ -1,13 +1,13 @@
 import id from 'uuid/v4';
 
-export const addRecord = (name, phone, organization, creationDate) => {
+export const addRecord = (record) => {
   return {
     type: 'ADD_RECORD',
     id: id(),
-    name,
-    phone,
-    organization,
-    creationDate,
+    name: record.name,
+    phone: record.phone,
+    organization: record.organization,
+    creationDate: Date.now(),
   }
 }
 
