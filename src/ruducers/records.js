@@ -3,6 +3,13 @@ const records = (state = [], action) => {
     case 'ADD_RECORD':
       return [
         ...state,
+        {
+          id: action.id,
+          name: action.name,
+          phone: action.phone,
+          organization: action.organization,
+          creationDate: action.creationDate,
+        }
       ]
     default:
       return state
