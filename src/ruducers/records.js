@@ -36,6 +36,8 @@ const records = (state = [...x], action) => {
           creationDate: action.creationDate,
         }
       ]
+    case 'DELETE_RECORD':
+      return state.filter(record => record.id !== action.id)
     default:
       return state
   }

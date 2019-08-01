@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  border-bottom: 1px solid rgb(112, 112, 112);
+  padding: 30px 20px;
+}
+
+.recordItem {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.name, .organization {
+  width: 30%;
+}
+
+.phone, .creationDate {
+  width: 20%;
+}
+
+.deleteIcon {
+  height: 20px;
+  cursor: pointer;
+}

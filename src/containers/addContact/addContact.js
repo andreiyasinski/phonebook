@@ -9,6 +9,7 @@ const AddContact = ({ dispatch }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    if(!name.value) return;
     dispatch(addRecord({
       name: name.value,
       phone: phone.value,
