@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './recordItem.module.css';
 import deleteIcon from '../../assets/trash-alt-regular.svg';
 
@@ -21,5 +22,14 @@ const RecordItem = ({ id, name, phone, organization, creationDate, onDeleteClick
     </td>
   </tr>
 )
+
+RecordItem.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  phone: PropTypes.string,
+  organization: PropTypes.string,
+  creationDate: PropTypes.string.isRequired,
+  onDeleteClick: PropTypes.func.isRequired
+}
 
 export default RecordItem
