@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { addRecord } from '../../actions'
 
-const AddContact = ({ dispatch }) => {
+const AddContactButton = ({ dispatch }) => {
   let name = React.createRef();
   let phone = React.createRef();
   let organization = React.createRef();
@@ -21,7 +21,7 @@ const AddContact = ({ dispatch }) => {
   }
 
   return (
-    <div>
+    <div className="container">
       <form onSubmit={handleSubmit}>
         <input ref={node => {
           name = node
@@ -40,4 +40,4 @@ const AddContact = ({ dispatch }) => {
   )
 }
 
-export default connect()(AddContact)
+export default connect()(AddContactButton)

@@ -4,7 +4,7 @@ import RecordsList from '../../components/recordsList/recordsList'
 
 const mapStateToProps = (state) => {
   return {
-    records: state.records
+    records: state.records,
   }
 }
 

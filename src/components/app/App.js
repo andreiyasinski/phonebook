@@ -1,15 +1,24 @@
 import React from 'react';
 import './App.css';
+import { connect } from 'react-redux'
 import Contacts from '../../containers/contacts/contacts'
-import AddContact from '../../containers/addContact/addContact'
+import AddContactForm from '../../containers/addContactForm/addContactForm'
+import AddContactButton from '../../containers/addContactButton/addContactButton'
 
-function App() {
+function App({ isVisible }) {
   return (
     <div className="App">
-      <AddContact />
+      { isVisible ? <AddContactForm /> : null}
+      <AddContactButton />
       <Contacts />
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    isVisible: state.addFormVisibilityFilter
+  }
+}
+
+export default connect(mapStateToProps)(App);

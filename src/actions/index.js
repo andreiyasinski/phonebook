@@ -25,9 +25,9 @@ export const editRecord = (id) => {
   }
 }
 
-export const setFormVisibilityFilter  = (filter) => {
+export const setAddFormVisibilityFilter  = (isVisible) => {
   return {
-    type: 'SET_FORM_VISIBILITY_FILTER',
-    filter
+    type: 'SHOW_ADD_FORM_VISIBILITY',
+    isVisible
   }
 }

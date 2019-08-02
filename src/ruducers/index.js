@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
 import records from './records'
-import formVisibilityFilter from './formVisibilityFilter'
+import addFormVisibilityFilter from './addFormVisibilityFilter'
 
 const phoneBookApp = combineReducers({
   records,
-  formVisibilityFilter
+  addFormVisibilityFilter
 })
 
 export default phoneBookApp
