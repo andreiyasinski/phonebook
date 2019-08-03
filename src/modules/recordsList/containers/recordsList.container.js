@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import { deleteRecord } from '../../actions'
-import RecordsList from '../../components/recordsList/recordsList'
+import { deleteRecord } from '../../../actions'
+import RecordsList from '../../recordsList/components/recordsList.component'
 
 const mapStateToProps = (state) => {
   return {
@@ -16,9 +16,7 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-const Contacts = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(RecordsList)
-
-export default Contacts

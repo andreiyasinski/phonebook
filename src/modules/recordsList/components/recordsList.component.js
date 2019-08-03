@@ -1,5 +1,5 @@
 import React from 'react';
-import RecordItem from '../recordItem/recordItem';
+import RecordItem from '../../recordItem/components/recordItem.component';
 import styles from './recordsList.module.css';
 import PropTypes from 'prop-types';
 

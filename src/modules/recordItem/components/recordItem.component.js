@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './recordItem.module.css';
-import deleteIcon from '../../assets/trash-alt-regular.svg';
+import deleteIcon from '../../../resources/svg/delete_icon.svg';
 
 const RecordItem = ({ id, name, phone, organization, creationDate, onDeleteClick }) => (
   <tr className={styles.container}>

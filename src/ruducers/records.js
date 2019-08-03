@@ -4,21 +4,21 @@ const x = [
   name: 'name 1',
   phone: 'phone 1',
   organization: 'organization 1',
-  creationDate: 'Date'
+  creationDate: '03:08:2019'
 },
 {
   id: '2',
   name: 'name 2',
   phone: 'phone 2',
   organization: 'organization 2',
-  creationDate: 'Date'
+  creationDate: '03:08:2019'
 },
 {
   id: '3',
   name: 'name 3',
   phone: 'phone 3',
   organization: 'organization 3',
-  creationDate: 'Date'
+  creationDate: '03:08:2019'
 }
 ]
 

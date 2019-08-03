@@ -4,7 +4,7 @@ import './index.css';
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import phoneBookApp from './ruducers'
-import App from './components/app/App';
+import App from './modules/app/containers/app.container';
 
 let store = createStore(phoneBookApp)
 console.log(store.getState())
