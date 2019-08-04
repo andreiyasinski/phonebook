@@ -1,7 +1,8 @@
 import React from 'react';
-import styles from './addContactForm.module.css'
+import styles from './addForm.module.css';
+import PropTypes from 'prop-types';
 
-const AddContactForm = ({ onAddClick, changeFormVisible }) => {
+const AddForm = ({ onAddClick, changeFormVisible }) => {
   let name = React.createRef();
   let phone = React.createRef();
   let organization = React.createRef();
@@ -54,7 +55,10 @@ const AddContactForm = ({ onAddClick, changeFormVisible }) => {
             ref={node => organization = node}
           />
         </label>
-        <button type="submit">
+        <button
+          type="submit"
+          className={styles.button}
+        >
           Add Contact
         </button>
       </form>
@@ -62,4 +66,9 @@ const AddContactForm = ({ onAddClick, changeFormVisible }) => {
   )
 }
 
-export default AddContactForm
+AddForm.propTypes = {
+  onAddClick: PropTypes.func.isRequired,
+  changeFormVisible: PropTypes.func.isRequired
+}
+
+export default AddForm

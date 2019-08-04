@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-// import { connect } from 'react-redux';
+import styles from './app.module.css';
 import RecordsList from '../../recordsList/containers/recordsList.container';
-import AddContactForm from '../../addContactForm/containers/addContactForm.container';
-import AddContactButton from '../../addContactButton/components/addContactButton.component';
+import AddForm from '../../addForm/containers/addForm.container';
+import Header from '../../header/components/header.component';
 
 export default class App extends Component {
   state = {
@@ -17,12 +17,14 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
-        <div>
-         { this.state.isVisible ? <AddContactForm changeFormVisible={this.changeFormVisible} /> : null}
-         <AddContactButton changeFormVisible={this.changeFormVisible} />
-         <RecordsList />
-       </div>
+      <div className={styles.container}>
+        <div className={styles.wrapper}>
+          <Header changeFormVisible={this.changeFormVisible} />
+          { this.state.isVisible ? <AddForm changeFormVisible={this.changeFormVisible } /> : null}
+          <div className={styles.content}>
+            <RecordsList />
+          </div>
+        </div>
       </div>
     );
   }

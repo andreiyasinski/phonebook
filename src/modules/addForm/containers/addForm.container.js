@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { addRecord } from '../../../actions';
-import AddContactForm from '../components/addContactForm.component.js';
+import AddForm from '../components/addForm.component.js';
 
 const mapStateToProps = (state) => {
   return {
@@ -16,4 +16,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddContactForm)
+export default connect(mapStateToProps, mapDispatchToProps)(AddForm)
