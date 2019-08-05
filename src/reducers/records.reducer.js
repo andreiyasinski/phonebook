@@ -1,29 +1,4 @@
-const x = [
-  {
-  id: '1',
-  name: 'name 1',
-  phone: 'phone 1',
-  organization: 'organization 1',
-  creationDate: '03:08:2019'
-},
-{
-  id: '2',
-  name: 'name 2',
-  phone: 'phone 2',
-  organization: 'organization 2',
-  creationDate: '03:08:2019'
-},
-{
-  id: '3',
-  name: 'name 3',
-  phone: 'phone 3',
-  organization: 'organization 3',
-  creationDate: '03:08:2019'
-}
-]
-
-
-const records = (state = [...x], action) => {
+const records = (state = [], action) => {
   switch (action.type) {
     case 'ADD_RECORD':
       return [
