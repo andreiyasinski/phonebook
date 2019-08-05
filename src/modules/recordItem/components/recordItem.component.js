@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './recordItem.module.css';
 import deleteIcon from '../../../resources/svg/delete_icon.svg';
+import editIcon from '../../../resources/svg/edit_icon.svg';
 
 const RecordItem = ({ id, name, phone, organization, creationDate, onDeleteClick }) => (
   <tr className={styles.container}>
@@ -17,7 +18,8 @@ const RecordItem = ({ id, name, phone, organization, creationDate, onDeleteClick
     <td className={styles.creationDate}>
       {creationDate}
     </td>
-    <td className={styles.creationDate}>
+    <td className={styles.options}>
+      <img src={editIcon} className={styles.editIcon} alt="edit" />
       <img onClick={() => onDeleteClick(id)} src={deleteIcon} className={styles.deleteIcon} alt="delete" />
     </td>
   </tr>

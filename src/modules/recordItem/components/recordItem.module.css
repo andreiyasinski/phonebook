@@ -2,23 +2,29 @@
   border-bottom: 1px solid #e9e9e9;
 }
 
-.recordItem {
-  
-}
-
 .name, .organization {
   width: 30%;
 }
 
 .phone, .creationDate {
- 
+  width: 18%;
 }
 
-.phone, .creationDate, .name, .organization {
+.phone, .creationDate, .name, .organization, .options {
   padding: 20px 5px;
 }
 
-.deleteIcon {
+.deleteIcon, .editIcon {
   height: 16px;
   cursor: pointer;
+}
+
+.editIcon {
+  margin-right: 15px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
