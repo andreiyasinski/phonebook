@@ -20,7 +20,7 @@ export default class App extends Component {
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <Header changeFormVisible={this.changeFormVisible} />
-          { this.state.isVisible ? <AddForm changeFormVisible={this.changeFormVisible } /> : null}
+          {this.state.isVisible && <AddForm changeFormVisible={this.changeFormVisible} />}
           <div className={styles.content}>
             <RecordsList />
           </div>
@@ -29,13 +29,3 @@ export default class App extends Component {
     );
   }
 }
-
-
-// const mapStateToProps = (state) => {
-//   return {
-//     isVisible: state.addFormVisibilityFilter
-//   }
-// }
-
-// export default connect(mapStateToProps)(App);
-// export default App;

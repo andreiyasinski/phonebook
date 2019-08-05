@@ -9,11 +9,6 @@ const AddForm = ({ onAddClick, changeFormVisible }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     if(!name.value) return;
-    // (() => addRecord({
-    //   name: name.value,
-    //   phone: phone.value,
-    //   organization: organization.value
-    // }))()
     onAddClick({
       name: name.value,
       phone: phone.value,

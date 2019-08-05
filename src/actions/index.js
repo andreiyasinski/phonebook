@@ -1,5 +1,9 @@
 import id from 'uuid/v4';
 
+export const ADD_RECORD = 'ADD_RECORD';
+export const DELETE_RECORD = 'DELETE_RECORD';
+export const EDIT_RECORD = 'EDIT_RECORD';
+
 export const addRecord = (record) => {
   return {
     type: 'ADD_RECORD',
@@ -22,12 +26,5 @@ export const editRecord = (id) => {
   return {
     type: 'EDIT_RECORD',
     id
-  }
-}
-
-export const setAddFormVisibilityFilter  = (isVisible) => {
-  return {
-    type: 'SHOW_ADD_FORM_VISIBILITY',
-    isVisible
   }
 }

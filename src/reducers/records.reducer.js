@@ -1,6 +1,8 @@
+import { ADD_RECORD, DELETE_RECORD } from '../actions';
+
 const records = (state = [], action) => {
   switch (action.type) {
-    case 'ADD_RECORD':
+    case ADD_RECORD:
       return [
         ...state,
         {
@@ -11,7 +13,7 @@ const records = (state = [], action) => {
           creationDate: action.creationDate,
         }
       ]
-    case 'DELETE_RECORD':
+    case DELETE_RECORD:
       return state.filter(record => record.id !== action.id)
     default:
       return state
