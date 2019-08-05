@@ -6,6 +6,7 @@ const AddForm = ({ onAddClick, changeFormVisible }) => {
   let name = React.createRef();
   let phone = React.createRef();
   let organization = React.createRef();
+  
   const handleSubmit = (e) => {
     e.preventDefault()
     if(!name.value) return;

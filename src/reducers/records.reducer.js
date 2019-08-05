@@ -5,16 +5,10 @@ const records = (state = [], action) => {
     case ADD_RECORD:
       return [
         ...state,
-        {
-          id: action.id,
-          name: action.name,
-          phone: action.phone,
-          organization: action.organization,
-          creationDate: action.creationDate,
-        }
+        action.payload
       ]
     case DELETE_RECORD:
-      return state.filter(record => record.id !== action.id)
+      return state.filter(record => record.id !== action.payload)
     default:
       return state
   }
