@@ -4,7 +4,7 @@ import styles from './recordItem.module.css';
 import deleteIcon from '../../../resources/svg/delete_icon.svg';
 import editIcon from '../../../resources/svg/edit_icon.svg';
 
-const RecordItem = ({ id, name, phone, organization, creationDate, onDeleteClick }) => (
+const RecordItem = ({ id, name, phone, organization, creationDate, onDeleteClick, setEditingRecord}) => (
   <tr className={styles.container}>
     <td className={styles.name}>
       {name}
@@ -19,8 +19,18 @@ const RecordItem = ({ id, name, phone, organization, creationDate, onDeleteClick
       {creationDate}
     </td>
     <td className={styles.options}>
-      <img src={editIcon} className={styles.editIcon} alt="edit" />
-      <img onClick={() => onDeleteClick(id)} src={deleteIcon} className={styles.deleteIcon} alt="delete" />
+      <img
+        onClick={() => setEditingRecord({id, name, phone, organization, creationDate})}
+        src={editIcon}
+        className={styles.editIcon}
+        alt="edit"
+      />
+      <img 
+        onClick={() => onDeleteClick(id)}
+        src={deleteIcon}
+        className={styles.deleteIcon}
+        alt="delete" 
+      />
     </td>
   </tr>
 )

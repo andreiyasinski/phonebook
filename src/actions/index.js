@@ -24,9 +24,15 @@ export const deleteRecord = (id) => {
   }
 }
 
-export const editRecord = (id) => {
+export const editRecord = (record) => {
   return {
     type: 'EDIT_RECORD',
-    payload: id
+    payload: {
+      id: record.id,
+      name: record.name,
+      phone: record.phone,
+      organization: record.organization,
+      creationDate: record.organization
+    }
   }
 }

@@ -1,13 +1,26 @@
 import React, { Component } from 'react';
-import styles from './addForm.module.css';
+import styles from './editForm.module.css';
 import PropTypes from 'prop-types';
 
-class AddForm extends Component {
+class EditForm extends Component {
   state = {
+    id: '',
     name: '',
     phone: '',
     organization: '',
+    creationdate: ''
   };
+
+  componentDidMount() {
+    const {id, name, phone, organization, creationdate} = this.props.editingRecord;
+    this.setState({
+      id,
+      name,
+      phone,
+      organization,
+      creationdate
+    })
+  }
   
   handleChange = e => {
     this.setState({
@@ -18,23 +31,24 @@ class AddForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
     if(!this.state.name) return;
-    this.props.onAddClick(this.state);
-    this.props.changeFormVisible();
+    this.props.onEditClick(this.state);
+    this.props.changeEditFormVisible();
     this.setState({
+      id: '',
       name: '',
       phone: '',
-      organization: ''
+      organization: '',
+      creationdate: ''
     });
   };
 
   hideForm = e => {
     if (e.currentTarget === e.target) {
-      this.props.changeFormVisible();
+      this.props.changeEditFormVisible();
     }
   };
 
   render() {
-    //const changeFormVisible = 
     return (
       <div>
         <div className={styles.container} onClick={this.hideForm} >
@@ -70,7 +84,7 @@ class AddForm extends Component {
               type="submit"
               className={styles.button}
             >
-              Add Contact
+              Edit Contact
             </button>
           </form>
         </div>
@@ -79,12 +93,19 @@ class AddForm extends Component {
   }
 }
 
-AddForm.propTypes = {
-  onAddClick: PropTypes.func.isRequired,
-  changeFormVisible: PropTypes.func.isRequired
+EditForm.propTypes = {
+  onEditClick: PropTypes.func.isRequired,
+  changeEditFormVisible: PropTypes.func.isRequired,
+  editingRecord: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    phone: PropTypes.string,
+    organization: PropTypes.string,
+    creationDate: PropTypes.string.isRequired,
+  }),
 };
 
-export default AddForm;
+export default EditForm;
 
 
 // import React from 'react';
