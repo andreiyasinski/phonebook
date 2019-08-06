@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './header.module.css';
 
-let Header = ({ changeFormVisible }) => {
+const Header = ({ changeFormVisible }) => {
   return (
     <header className={styles.container}>
       <p className={styles.title}>Phone Book</p>
