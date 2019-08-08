@@ -1,4 +1,5 @@
 import id from 'uuid/v4';
+import { format } from 'date-fns';
 
 export const ADD_RECORD = 'ADD_RECORD';
 export const DELETE_RECORD = 'DELETE_RECORD';
@@ -12,7 +13,7 @@ export const addRecord = (record) => {
       name: record.name,
       phone: record.phone,
       organization: record.organization,
-      creationDate: `${new Date().getDate().toString().padStart(2,'0')}:${(new Date().getMonth() + 1).toString().padStart(2,'0') }:${new Date().getFullYear()}`,
+      creationDate: format(new Date(), 'MM:DD:YYYY'),
     }
   }
 }
