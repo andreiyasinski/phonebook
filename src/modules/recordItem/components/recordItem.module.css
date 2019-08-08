@@ -6,12 +6,16 @@
   width: 30%;
 }
 
-.phone, .creationDate {
-  width: 18%;
+.creationDate, .name, .organization {
+  padding: 20px 5px;
 }
 
-.phone, .creationDate, .name, .organization, .options {
-  padding: 20px 5px;
+.name {
+  padding: 20px 5px 20px 30px;
+}
+
+.options {
+  padding: 20px 30px 20px 5px;
 }
 
 .deleteIcon, .editIcon {
