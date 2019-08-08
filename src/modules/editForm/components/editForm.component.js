@@ -8,17 +8,17 @@ class EditForm extends Component {
     name: '',
     phone: '',
     organization: '',
-    creationdate: ''
+    creationDate: ''
   };
 
   componentDidMount() {
-    const {id, name, phone, organization, creationdate} = this.props.editingRecord;
+    const {id, name, phone, organization, creationDate} = this.props.editingRecord;
     this.setState({
       id,
       name,
       phone,
       organization,
-      creationdate
+      creationDate
     })
   }
   

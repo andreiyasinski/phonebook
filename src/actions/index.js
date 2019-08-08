@@ -6,7 +6,7 @@ export const EDIT_RECORD = 'EDIT_RECORD';
 
 export const addRecord = (record) => {
   return {
-    type: 'ADD_RECORD',
+    type: ADD_RECORD,
     payload: {
       id: id(),
       name: record.name,
@@ -19,20 +19,20 @@ export const addRecord = (record) => {
 
 export const deleteRecord = (id) => {
   return {
-    type: 'DELETE_RECORD',
+    type: DELETE_RECORD,
     payload: id
   }
 }
 
 export const editRecord = (record) => {
   return {
-    type: 'EDIT_RECORD',
+    type: EDIT_RECORD,
     payload: {
       id: record.id,
       name: record.name,
       phone: record.phone,
       organization: record.organization,
-      creationDate: record.organization
+      creationDate: record.creationDate
     }
   }
 }
