@@ -17,8 +17,9 @@ class AddForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    const { name, phone, organization } = this.state;
     if(!this.state.name) return;
-    this.props.onAddClick(this.state);
+    this.props.onAddClick({name, phone, organization});
     this.props.changeFormVisible();
     this.setState({
       name: '',

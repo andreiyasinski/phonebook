@@ -30,8 +30,9 @@ class EditForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    const { id, name, phone, organization, creationDate } = this.state;
     if(!this.state.name) return;
-    this.props.onEditClick(this.state);
+    this.props.onEditClick({id, name, phone, organization, creationDate});
     this.props.changeEditFormVisible();
     this.setState({
       id: '',
