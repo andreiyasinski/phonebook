@@ -21,7 +21,9 @@ export const addRecord = (record) => {
 export const deleteRecord = (id) => {
   return {
     type: DELETE_RECORD,
-    payload: id
+    payload: {
+      id
+    }
   }
 }
 

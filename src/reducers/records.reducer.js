@@ -15,7 +15,7 @@ const records = (state = [], action) => {
         return record;
       })
     case DELETE_RECORD:
-      return state.filter(record => record.id !== action.payload)
+      return state.filter(record => record.id !== action.payload.id)
     default:
       return state
   }

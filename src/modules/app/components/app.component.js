@@ -32,15 +32,13 @@ export default class App extends Component {
   }
 
   render() {
+    const { isVisible, isEditFormVisible, editingRecord } = this.state;
     return (
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <Header changeFormVisible={this.changeFormVisible} />
-          {this.state.isVisible && <AddForm changeFormVisible={this.changeFormVisible} />}
-          {
-            this.state.isEditFormVisible
-            &&
-            <EditForm changeEditFormVisible={this.changeEditFormVisible} editingRecord={this.state.editingRecord} />
+          {isVisible && <AddForm changeFormVisible={this.changeFormVisible} />}
+          {isEditFormVisible && <EditForm changeEditFormVisible={this.changeEditFormVisible} editingRecord={editingRecord} />
           }
           <div className={styles.content}>
             <RecordsList setEditingRecord={this.setEditingRecord} />

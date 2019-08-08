@@ -4,24 +4,13 @@ import PropTypes from 'prop-types';
 
 class EditForm extends Component {
   state = {
-    id: '',
-    name: '',
-    phone: '',
-    organization: '',
-    creationDate: ''
+    id: this.props.editingRecord.id,
+    name: this.props.editingRecord.name,
+    phone: this.props.editingRecord.phone,
+    organization: this.props.editingRecord.organization,
+    creationDate: this.props.editingRecord.creationDate
   };
 
-  componentDidMount() {
-    const {id, name, phone, organization, creationDate} = this.props.editingRecord;
-    this.setState({
-      id,
-      name,
-      phone,
-      organization,
-      creationDate
-    })
-  }
-  
   handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value,
