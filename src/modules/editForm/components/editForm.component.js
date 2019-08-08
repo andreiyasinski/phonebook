@@ -54,7 +54,7 @@ class EditForm extends Component {
         <div className={styles.container} onClick={this.hideForm} >
           <form onSubmit={this.handleSubmit} className={styles.form}>
             <label>
-              Name:<br />
+              Name:
               <input 
                 className={styles.input}
                 value={this.state.name}
@@ -63,7 +63,7 @@ class EditForm extends Component {
               />
             </label>
             <label>
-              Phone number:<br />
+              Phone number:
               <input
                 className={styles.input}
                 value={this.state.phone}
@@ -72,7 +72,7 @@ class EditForm extends Component {
               />
             </label>
             <label>
-              Organization<br />
+              Organization:
               <input
                 className={styles.input}
                 value={this.state.organization}
