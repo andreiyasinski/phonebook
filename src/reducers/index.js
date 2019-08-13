@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
+import editingRecord from './editingRecord.reducer';
 import records from './records.reducer';
-//import addFormVisibilityFilter from './addFormVisibilityFilter'
 
 const phoneBookApp = combineReducers({
+  editingRecord,
   records
 })
 

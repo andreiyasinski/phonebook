@@ -5,6 +5,7 @@ import EditForm from '../components/editForm.component.js';
 const mapStateToProps = (state) => {
   return {
     records: state.records,
+    editingRecord: state.records.filter(record => record.id === state.editingRecord)[0]
   }
 }
 

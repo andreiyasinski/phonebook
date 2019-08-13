@@ -4,6 +4,7 @@ import { format } from 'date-fns';
 export const ADD_RECORD = 'ADD_RECORD';
 export const DELETE_RECORD = 'DELETE_RECORD';
 export const EDIT_RECORD = 'EDIT_RECORD';
+export const SET_EDITING_RECORD = 'SET_EDITING_RECORD';
 
 export const addRecord = (record) => {
   return {
@@ -36,6 +37,15 @@ export const editRecord = (record) => {
       phone: record.phone,
       organization: record.organization,
       creationDate: record.creationDate
+    }
+  }
+}
+
+export const setEditingRecord = (id) => {
+  return {
+    type: SET_EDITING_RECORD,
+    payload: {
+      id
     }
   }
 }

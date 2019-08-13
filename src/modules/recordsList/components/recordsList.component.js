@@ -3,7 +3,7 @@ import RecordItem from '../../recordItem/components/recordItem.component';
 import styles from './recordsList.module.css';
 import PropTypes from 'prop-types';
 
-const RecordsList = ({ records, onDeleteClick, setEditingRecord }) => (
+const RecordsList = ({ records, onDeleteClick, onEditClick, changeEditFormVisible }) => (
   <table className={styles.container}>
     <thead>
       <tr className={styles.titleWrapper}>
@@ -21,7 +21,8 @@ const RecordsList = ({ records, onDeleteClick, setEditingRecord }) => (
           key={record.id}
           {...record}
           onDeleteClick={onDeleteClick}
-          setEditingRecord={setEditingRecord}
+          onEditClick={onEditClick}
+          changeEditFormVisible={changeEditFormVisible}
         />
         )
       })}
