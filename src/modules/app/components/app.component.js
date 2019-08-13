@@ -12,23 +12,23 @@ export default class App extends Component {
     editingRecord: {}
   }
 
-  changeFormVisible = () => {
+  changeFormVisible = (isFormVisble) => {
     this.setState({
-      isVisible: !this.state.isVisible
+      isVisible: isFormVisble
     })
   }
 
-  changeEditFormVisible = () => {
+  changeEditFormVisible = (isFormVisble) => {
     this.setState({
-      isEditFormVisible: !this.state.isEditFormVisible
+      isEditFormVisible: isFormVisble
     })
   }
 
   setEditingRecord = (record) => {
     this.setState({
       editingRecord: record,
-      isEditFormVisible: !this.state.isEditFormVisible,
     })
+    this.changeEditFormVisible(true);
   }
 
   render() {
@@ -41,7 +41,7 @@ export default class App extends Component {
           {isEditFormVisible && <EditForm changeEditFormVisible={this.changeEditFormVisible} editingRecord={editingRecord} />
           }
           <div className={styles.content}>
-            <RecordsList setEditingRecord={this.setEditingRecord} />
+            <RecordsList setEditingRecord={this.setEditingRecord}  changeEditFormVisible={this.changeEditFormVisible} />
           </div>
         </div>
       </div>

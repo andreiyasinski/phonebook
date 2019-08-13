@@ -22,7 +22,7 @@ class EditForm extends Component {
     const { id, name, phone, organization, creationDate } = this.state;
     if(!this.state.name) return;
     this.props.onEditClick({id, name, phone, organization, creationDate});
-    this.props.changeEditFormVisible();
+    this.props.changeEditFormVisible(false);
     this.setState({
       id: '',
       name: '',
@@ -34,7 +34,7 @@ class EditForm extends Component {
 
   hideForm = e => {
     if (e.currentTarget === e.target) {
-      this.props.changeEditFormVisible();
+      this.props.changeEditFormVisible(false);
     }
   };
 

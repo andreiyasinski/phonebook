@@ -20,7 +20,7 @@ class AddForm extends Component {
     const { name, phone, organization } = this.state;
     if(!this.state.name) return;
     this.props.onAddClick({name, phone, organization});
-    this.props.changeFormVisible();
+    this.props.changeFormVisible(false);
     this.setState({
       name: '',
       phone: '',
@@ -30,7 +30,7 @@ class AddForm extends Component {
 
   hideForm = e => {
     if (e.currentTarget === e.target) {
-      this.props.changeFormVisible();
+      this.props.changeFormVisible(false);
     }
   };
 
