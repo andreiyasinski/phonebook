@@ -38,7 +38,8 @@ RecordItem.propTypes = {
   phone: PropTypes.string,
   organization: PropTypes.string,
   creationDate: PropTypes.string.isRequired,
-  onDeleteClick: PropTypes.func.isRequired
+  onDeleteClick: PropTypes.func.isRequired,
+  changeEditFormVisible: PropTypes.func.isRequired
 }
 
 export default RecordItem

@@ -38,7 +38,8 @@ RecordsList.propTypes = {
     organization: PropTypes.string,
     creationDate: PropTypes.string.isRequired
   }).isRequired).isRequired,
-  onDeleteClick: PropTypes.func.isRequired
+  onDeleteClick: PropTypes.func.isRequired,
+  changeEditFormVisible: PropTypes.func.isRequired
 }
 
 export default RecordsList
