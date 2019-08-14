@@ -17,4 +17,6 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(EditForm)
+const EditFormContainer = connect(mapStateToProps, mapDispatchToProps)(EditForm);
+
+export default EditFormContainer;

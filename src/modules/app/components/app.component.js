@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import styles from './app.module.css';
-import RecordsList from '../../recordsList/containers/recordsList.container';
-import AddForm from '../../addForm/containers/addForm.container';
-import EditForm from '../../editForm/containers/editForm.container';
+import RecordsListContainer from '../../recordsList/containers/recordsList.container';
+import AddFormContainer from '../../addForm/containers/addForm.container';
+import EditFormContainer from '../../editForm/containers/editForm.container';
 import Header from '../../header/components/header.component';
 
 export default class App extends Component {
@@ -37,11 +37,11 @@ export default class App extends Component {
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <Header changeFormVisible={this.changeFormVisible} />
-          {isVisible && <AddForm changeFormVisible={this.changeFormVisible} />}
-          {isEditFormVisible && <EditForm changeEditFormVisible={this.changeEditFormVisible} editingRecord={editingRecord} />
+          {isVisible && <AddFormContainer changeFormVisible={this.changeFormVisible} />}
+          {isEditFormVisible && <EditFormContainer changeEditFormVisible={this.changeEditFormVisible} editingRecord={editingRecord} />
           }
           <div className={styles.content}>
-            <RecordsList changeEditFormVisible={this.changeEditFormVisible} />
+            <RecordsListContainer changeEditFormVisible={this.changeEditFormVisible} />
           </div>
         </div>
       </div>

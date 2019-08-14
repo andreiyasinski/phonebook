@@ -20,7 +20,6 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(RecordsList)
+const RecordsListContainer = connect(mapStateToProps, mapDispatchToProps)(RecordsList);
+
+export default RecordsListContainer;
